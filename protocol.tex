@@ -22,12 +22,12 @@
 \maketitle
 
 \section{Introduction}
-Yixin protocol is a protocol derived from Gomocup protocol~\cite{gomocup-protocol}. Firstly used by Yixin~\cite{yixin}, it supports more commands than Gomocup protocol. This document describes extensions and modifications of Yixin protocol compared with Gomocup protocol. For detail implementation of Yixin protocol, readers are recommended to refer Yixin Board~\cite{yixin-board} which have implemented all the extensions and modifications described in this document.
+Yixin protocol is a protocol derived from Gomocup protocol~\cite{gomocup-protocol}. Firstly used by Yixin~\cite{yixin}, it supports more commands than Gomocup protocol. This document describes extensions and modifications of Yixin protocol compared with Gomocup protocol. For detail implementation of Yixin protocol, readers are recommended to refer Yixin Board~\cite{yixin-board} which has implemented all the extensions and modifications described in this document.
 
 \section{Modification}
 Compared with Gomocup protocol, Yixin protocol makes the following modifications:
 \begin{itemize}
-\item The old protocol used by Gomocup~\cite{old-gomocup-protocol} which use files for communication is no longer supported. So the name of brain is no longer required to begin with prefix ``pbrain-".
+\item The old protocol used by Gomocup~\cite{old-gomocup-protocol} which uses files for communication is no longer supported. So the name of brain is no longer required to begin with prefix ``pbrain-".
 \item Yixin protocol no longer supports continuous game, that is, \textbf{INFO rule [value]} with \textbf{value} equals 2 or 3 does not represent continuous game any more. Instead, renju is supported by Yixin protocol and \textbf{INFO rule 2} represents renju rule.
 \item 
 \end{itemize}
