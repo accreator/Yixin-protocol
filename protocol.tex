@@ -27,12 +27,11 @@ Yixin protocol is a protocol derived from Gomocup protocol~\cite{gomocup-protoco
 \section{Modification}
 Compared with Gomocup protocol, Yixin protocol makes the following modifications:
 \begin{itemize}
-\item The old protocol used by Gomocup~\cite{old-gomocup-protocol} which uses files for communication is no longer supported. So the name of brain is no longer required to begin with prefix ``pbrain-".
+\item The old protocol used by Gomocup~\cite{old-gomocup-protocol} which uses files for communication is no longer supported. Therefore the name of brain is no longer required to begin with prefix ``pbrain-".
 \item Yixin protocol no longer supports continuous game, that is, \textbf{INFO rule [value]} with \textbf{value} equals 2 or 3 does not represent continuous game any more. Instead, renju is supported by Yixin protocol and \textbf{INFO rule 2} represents renju rule.
-\item 
 \end{itemize}
 \section{Extension}
-Compared with Gomocup protocol, Yixin protocol add the following extensions:
+Compared with Gomocup protocol, Yixin protocol adds the following extensions:
 \begin{itemize}
 \item \textbf{yxboard}
 After this command the data forming the playing field are send. Every line is in the form:
@@ -113,6 +112,8 @@ The brain answers:
 {
 FORBID 09121011.
 }
+
+In the above example, there are two forbidden moves, one is $(9,12)$ and the other is $(10,11)$.
 
 \item \textbf{INFO max\_depth [value]}
 The brain should stop thinking when its searching depth is over \textbf{[value]}.
