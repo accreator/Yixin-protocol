@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{url}
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+% \\
+% \clearpage
+\begin{document}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem*{myproof}{Proof}
+\newtheorem*{myexercise}{Exercise}
+\newtheorem*{myproblem}{Problem}
+%\setlength{\parindent}{0em}
+\author{Kai Sun}
+\title{Yixin Protocol}
+\maketitle
+
+\section{Introduction}
+Yixin protocol is a protocol derived from Gomocup protocol~\cite{gomocup-protocol}. Firstly used by Yixin~\cite{yixin}, it supports more commands than Gomocup protocol. This document describes extensions and modifications of Yixin protocol compared with Gomocup protocol. For detail implementation of Yixin protocol, readers are recommended to refer Yixin Board~\cite{yixin-board} which have implemented all the extensions and modifications described in this document.
+
+\section{Modification}
+Compared with Gomocup protocol, Yixin protocol makes the following modifications:
+\begin{itemize}
+\item The old protocol used by Gomocup~\cite{old-gomocup-protocol} which use files for communication is no longer supported. So the name of brain is no longer required to begin with prefix ``pbrain-".
+\item Yixin protocol no longer supports continuous game, that is, \textbf{INFO rule [value]} with \textbf{value} equals 2 or 3 does not represent continuous game any more. Instead, renju is introduced to Yixin protocol and \textbf{INFO rule 2} represents renju rule.
+\end{itemize}
+\section{Extension}
+Compared with Gomocup protocol, Yixin protocol add the following extensions:
+\begin{itemize}
+\item \textbf{yxboard}
+\item \textbf{yxstop}
+\item \textbf{yxshowforbid}
+\item \textbf{INFO max\_depth [value]}
+\item \textbf{INFO max\_node [value]}
+\end{itemize}
+
+\bibliography{protocol}
+\bibliographystyle{plain}
+\end{document}
