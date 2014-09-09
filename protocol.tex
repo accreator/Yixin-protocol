@@ -115,11 +115,20 @@ FORBID 09121011.
 
 In the above example, there are two forbidden moves, one is $(9,12)$ and the other is $(10,11)$.
 
+\item \textbf{yxhashclear}
+When the brain receives this command, it should clear its hash memory.
+
 \item \textbf{INFO max\_depth [value]}
 The brain should stop thinking when its searching depth is over \textbf{[value]}.
 \item \textbf{INFO max\_node [value]}
 The brain should stop thinking when it has searched over \textbf{[value]} nodes. %In particular, -1
-
+\item \textbf{INFO hash\_size [value]}
+The brain should use at most $\textbf{[value]}$ KB hash memory.
+\item \textbf{INFO thread\_num [value]}
+The brain should use at most \textbf{[value]} threads for thinking.
+\item \textbf{INFO thread\_split\_depth [value]}
+The minimum depth at which work can be split between threads.
+%\item \textbf{INFO caution\_factor [value]}
 \end{itemize}
 
 \bibliography{protocol}
